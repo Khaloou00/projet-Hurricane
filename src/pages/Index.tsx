@@ -216,8 +216,8 @@ const Index = () => {
 
       {/* Featured Project */}
       <div>
-        <section id="promo" className="py-24 bg-white">
-          <div className="max-w-[70%] mx-auto px-6">
+        <section id="promo" className="py-4 bg-white">
+          <div className="max-w-[85%]  mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-red-600 font-bold tracking-wider text-sm uppercase">
                 NOTRE OFFRE PHARE
@@ -239,11 +239,11 @@ const Index = () => {
 
             <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div
-                className="rounded-[10px] h-[300px] md:h-[350px] lg:h-[420px] relative cursor-pointer"
+                className="rounded-[10px] h-[300px] w-auto md:h-[350px] lg:h-[420px] relative cursor-pointer"
                 onClick={() => setVideoPlayed(true)}
               >
                 {videoPlayed ? (
-                  <div className="z-10 relative w-full h-full">
+                  <div className="z-10 relative w-full h-[50%]">
                     {/* Loading indicator */}
                     <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-70 rounded-[10px]">
                       <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -252,7 +252,7 @@ const Index = () => {
                       src="https://www.youtube.com/embed/8w2drULRCR8?autoplay=1&modestbranding=1&rel=0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
-                      className="w-full h-full rounded-[10px] absolute inset-0 z-20"
+                      className="w-full  rounded-[10px] absolute inset-0 z-20"
                       title="Lots Bingerville ACD"
                       onLoad={(e) => {
                         // Hide the loading indicator when iframe is loaded
