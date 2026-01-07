@@ -10,6 +10,7 @@ import Offres from "./pages/Offres";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import Construction from "./pages/Construction";
+import { Analytics } from "@vercel/analytics/react";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,10 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <div>
+          {/* ... */}
+          <Analytics />
+        </div>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
