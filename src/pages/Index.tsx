@@ -216,8 +216,8 @@ const Index = () => {
 
       {/* Featured Project */}
       <div>
-        <section id="promo" className="py-24 bg-white">
-          <div className="max-w-[80%] mx-auto px-6">
+        <section id="promo" className="py-2 bg-white">
+          <div className="max-w-[90%] mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-red-600 font-bold tracking-wider text-sm uppercase">
                 NOTRE OFFRE PHARE
@@ -239,7 +239,7 @@ const Index = () => {
 
             <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div
-                className="rounded-[10px] h-[300px] w-auto md:h-[350px] lg:h-[420px] relative cursor-pointer"
+                className="rounded-[10px] h-[320px] w-full md:h-[350px] lg:h-[420px] relative cursor-pointer"
                 onClick={() => setVideoPlayed(true)}
               >
                 {videoPlayed ? (
