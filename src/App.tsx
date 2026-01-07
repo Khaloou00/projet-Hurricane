@@ -15,32 +15,31 @@ import { Analytics } from "@vercel/analytics/react";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <div>
-          {/* ... */}
-          <Analytics />
-        </div>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/a-propos" element={<About />} />
-          <Route path="/offres" element={<Offres />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/construction" element={<Construction />} />
-          <Route path="/domaines/intermediation" element={<Index />} />
-          <Route path="/domaines/immobilier" element={<Index />} />
-          <Route path="/domaines/constructions" element={<Index />} />
+  <div>
+    <Analytics />
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/a-propos" element={<About />} />
+            <Route path="/offres" element={<Offres />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/construction" element={<Construction />} />
+            <Route path="/domaines/intermediation" element={<Index />} />
+            <Route path="/domaines/immobilier" element={<Index />} />
+            <Route path="/domaines/constructions" element={<Index />} />
 
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </div>
 );
 
 export default App;
