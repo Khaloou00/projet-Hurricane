@@ -21,7 +21,7 @@ import { HiOutlineHomeModern } from "react-icons/hi2";
 import { useState } from "react";
 import Cite from "@/assets/logo-hurricane.png";
 import YoutubeIcon from "@/assets/téléchargement.png";
-import Aj from "@/assets/banner.png";
+import Aj from "@/assets/RE.png";
 import Confiance from "./Confiance";
 import Camion from "./Camion";
 import { link } from "../../node_modules/@types/d3-shape/index.d";
