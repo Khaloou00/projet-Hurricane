@@ -21,9 +21,10 @@ import { HiOutlineHomeModern } from "react-icons/hi2";
 import { useState } from "react";
 import Cite from "@/assets/logo-hurricane.png";
 import YoutubeIcon from "@/assets/téléchargement.png";
-import Aj from "@/assets/RA.jpeg";
+import Aj from "@/assets/banner.png";
 import Confiance from "./Confiance";
 import Camion from "./Camion";
+import { link } from "../../node_modules/@types/d3-shape/index.d";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -35,6 +36,8 @@ const Index = () => {
   const [videoLoading, setVideoLoading] = useState(true);
   const [videoPlayed, setVideoPlayed] = useState(false);
   const [isVideoLoading, setIsVideoLoading] = useState(false);
+
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // Définir la fonction handleVideoPlay
   const handleVideoPlay = () => {
@@ -54,91 +57,101 @@ const Index = () => {
       {/* Hero Section - Split Design */}
       <section className="relative min-h-screen grid lg:grid-cols-2">
         {/* Left Side - Real Estate */}
-        <div className="relative flex items-center justify-center min-h-[50vh] lg:min-h-screen overflow-hidden pt-[50px]">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${Aj})` }}
-          />
-          <div className="absolute inset-0 bg-hurricane-black/70" />
-          <div className="relative z-10 p-8 lg:p-16 max-w-xl">
-            <motion.span
-              {...fadeInUp}
-              className="text-primary text-sm font-semibold tracking-widest uppercase"
-            >
-              Notre Expertise
-            </motion.span>
-            <motion.h1
-              {...fadeInUp}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mt-4 leading-tight"
-            >
-              Immobilier & Construction
-            </motion.h1>
-            <motion.p
-              {...fadeInUp}
-              transition={{ delay: 0.2 }}
-              className="text-primary-foreground/80 mt-6 text-lg"
-            >
-              Investissez dans l'avenir avec nos projets immobiliers d'exception
-              en Côte d'Ivoire.
-            </motion.p>
-            <motion.div
-              {...fadeInUp}
-              transition={{ delay: 0.3 }}
-              className="mt-8"
-            >
-              <Button variant="heroLight" size="xl" className="group" asChild>
-                <Link to="/construction">
-                  Découvrir le projet
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-            </motion.div>
+        <Link
+          to="/immobilier"
+          className="block hover:cursor-pointer hover:scale-105 transition duration-500 z-2"
+        >
+          <div className="relative flex items-center justify-center min-h-[50vh] lg:min-h-screen overflow-hidden pt-[50px]">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${Aj})` }}
+            />
+            <div className="absolute inset-0 bg-hurricane-black/70" />
+            <div className="relative z-10 p-8 lg:p-16 max-w-xl">
+              <motion.span
+                {...fadeInUp}
+                className="text-primary text-sm font-semibold tracking-widest uppercase"
+              >
+                Notre Expertise
+              </motion.span>
+              <motion.h1
+                {...fadeInUp}
+                transition={{ delay: 0.1 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mt-4 leading-tight"
+              >
+                Immobilier & Construction
+              </motion.h1>
+              <motion.p
+                {...fadeInUp}
+                transition={{ delay: 0.2 }}
+                className="text-primary-foreground/80 mt-6 text-lg"
+              >
+                Investissez dans l'avenir avec nos projets immobiliers
+                d'exception en Côte d'Ivoire.
+              </motion.p>
+              <motion.div
+                {...fadeInUp}
+                transition={{ delay: 0.3 }}
+                className="mt-8"
+              >
+                <Button variant="heroLight" size="xl" className="group" asChild>
+                  <Link to="/construction">
+                    Découvrir le projet
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
           </div>
-        </div>
+        </Link>
 
         {/* Right Side - Commercial Services */}
-        <div className="relative flex items-center justify-center min-h-[50vh] lg:min-h-screen overflow-hidden bg-hurricane-black">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: `url(${heroBackground})` }}
-          />
-          <div className="relative z-10 p-8 lg:p-16 max-w-xl">
-            <motion.span
-              {...fadeInUp}
-              className="text-primary text-sm font-semibold tracking-widest uppercase"
-            >
-              Notre Expertise
-            </motion.span>
-            <motion.h1
-              {...fadeInUp}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mt-4 leading-tight"
-            >
-              Intermédiation Commerciale
-            </motion.h1>
-            <motion.p
-              {...fadeInUp}
-              transition={{ delay: 0.2 }}
-              className="text-primary-foreground/80 mt-6 text-lg"
-            >
-              Votre partenaire stratégique pour toutes vos transactions
-              commerciales.
-            </motion.p>
-            <motion.div
-              {...fadeInUp}
-              transition={{ delay: 0.3 }}
-              className="mt-8"
-            >
-              <Button variant="hero" size="xl" className="group" asChild>
-                <Link to="/construction">
-                  Voir nos solutions
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-            </motion.div>
+        <Link
+          to="/services-commercials"
+          className="block hover:cursor-pointer hover:scale-105 transition duration-500 z-2"
+        >
+          <div className="relative flex items-center justify-center min-h-[50vh] lg:min-h-screen overflow-hidden bg-hurricane-black ">
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-20 "
+              style={{ backgroundImage: `url(${heroBackground})` }}
+            />
+            <div className="relative z-10 p-8 lg:p-16 max-w-xl">
+              <motion.span
+                {...fadeInUp}
+                className="text-primary text-sm font-semibold tracking-widest uppercase"
+              >
+                Notre Expertise
+              </motion.span>
+              <motion.h1
+                {...fadeInUp}
+                transition={{ delay: 0.1 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mt-4 leading-tight"
+              >
+                Intermédiation Commerciale
+              </motion.h1>
+              <motion.p
+                {...fadeInUp}
+                transition={{ delay: 0.2 }}
+                className="text-primary-foreground/80 mt-6 text-lg"
+              >
+                Votre partenaire stratégique pour toutes vos transactions
+                commerciales.
+              </motion.p>
+              <motion.div
+                {...fadeInUp}
+                transition={{ delay: 0.3 }}
+                className="mt-8"
+              >
+                <Button variant="hero" size="xl" className="group" asChild>
+                  <Link to="/construction">
+                    Voir nos solutions
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
           </div>
-        </div>
+        </Link>
       </section>
 
       {/* Domains Section */}
@@ -236,28 +249,30 @@ const Index = () => {
                 l'investissement immobilier.
               </p>
             </div>
-
+            //début du nouveau code
             <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div
                 className="rounded-[10px] h-[320px] w-full md:h-[350px] lg:h-[420px] relative cursor-pointer"
-                onClick={() => setVideoPlayed(true)}
+                onClick={() => {
+                  setVideoPlayed(true);
+                  setIsLoading(true); // Reset loading state when video is clicked
+                }}
               >
                 {videoPlayed ? (
                   <div className="z-10 relative w-full h-full">
                     {/* Loading indicator */}
-                    <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-70 rounded-[10px]">
-                      <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-                    </div>
+                    {isLoading && (
+                      <div className="absolute inset-0 flex items-center justify-center z-10 bg-black bg-opacity-70 rounded-[10px]">
+                        <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    )}
                     <iframe
                       src="https://www.youtube.com/embed/8w2drULRCR8?autoplay=1&modestbranding=1&rel=0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       className="w-full h-full rounded-[10px] absolute inset-0 z-20"
                       title="Lots Bingerville ACD"
-                      onLoad={(e) => {
-                        // Hide the loading indicator when iframe is loaded
-                        e.target.previousSibling.style.display = "none";
-                      }}
+                      onLoad={() => setIsLoading(false)}
                     />
                   </div>
                 ) : (
@@ -404,7 +419,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-
             {/* CTA Button */}
             <div className="mt-8 text-center">
               <Link

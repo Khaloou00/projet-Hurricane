@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
-import LL from "@/assets/HSM.png";
+import LL from "@/assets/Acd.png";
 import Voir from "@/assets/Ter.png";
 
 // Définition des animations
