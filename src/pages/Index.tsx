@@ -58,7 +58,7 @@ const Index = () => {
       <section className="relative min-h-screen grid lg:grid-cols-2">
         {/* Left Side - Real Estate */}
         <Link
-          to="/immobilier"
+          to="/construction"
           className="block hover:cursor-pointer hover:scale-105 transition duration-500 z-2"
         >
           <div className="relative flex items-center justify-center min-h-[50vh] lg:min-h-screen overflow-hidden pt-[50px]">
@@ -107,7 +107,7 @@ const Index = () => {
 
         {/* Right Side - Commercial Services */}
         <Link
-          to="/services-commercials"
+          to="/construction"
           className="block hover:cursor-pointer hover:scale-105 transition duration-500 z-2"
         >
           <div className="relative flex items-center justify-center min-h-[50vh] lg:min-h-screen overflow-hidden bg-hurricane-black ">

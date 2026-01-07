@@ -13,6 +13,7 @@ import {
   Pause,
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import Equipe from "./Equipe";
 
 const About = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -195,10 +196,10 @@ const About = () => {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
-                  { value: "10+", label: "Années d'expérience" },
-                  { value: "150+", label: "Projets réalisés" },
-                  { value: "500+", label: "Clients satisfaits" },
-                  { value: "50+", label: "Collaborateurs" },
+                  { value: "5+", label: "Années d'expérience" },
+                  { value: "50+", label: "Projets réalisés" },
+                  { value: "50+", label: "Clients satisfaits" },
+                  { value: "20+", label: "Collaborateurs" },
                 ].map((stat) => (
                   <div key={stat.label}>
                     <div className="text-4xl md:text-5xl font-bold text-primary">
@@ -231,6 +232,7 @@ const About = () => {
             </motion.div>
           </div>
         </section>
+        <Equipe />
       </main>
 
       <Footer />
