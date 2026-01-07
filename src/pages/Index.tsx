@@ -249,7 +249,7 @@ const Index = () => {
                 l'investissement immobilier.
               </p>
             </div>
-            //début du nouveau code
+
             <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div
                 className="rounded-[10px] h-[320px] w-full md:h-[350px] lg:h-[420px] relative cursor-pointer"
