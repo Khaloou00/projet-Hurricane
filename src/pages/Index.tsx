@@ -19,7 +19,7 @@ import immobilierBg from "@/assets/immobilier-bg.jpg";
 import { GrMapLocation } from "react-icons/gr";
 import { HiOutlineHomeModern } from "react-icons/hi2";
 import { useState } from "react";
-import Cite from "@/assets/logo-hurricane.png";
+import Cite from "@/assets/RE.png";
 import YoutubeIcon from "@/assets/téléchargement.png";
 import Aj from "@/assets/RE.png";
 import Confiance from "./Confiance";
@@ -267,7 +267,7 @@ const Index = () => {
                       </div>
                     )}
                     <iframe
-                      src="https://www.youtube.com/embed/8w2drULRCR8?autoplay=1&modestbranding=1&rel=0"
+                      src="https://www.youtube.com/embed/mvp01u2pWyQ?autoplay=1&rel=0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       className="w-full h-full rounded-[10px] absolute inset-0 z-20"
@@ -278,7 +278,7 @@ const Index = () => {
                 ) : (
                   <div className="relative w-full h-full group cursor-pointer">
                     {/* Overlay de hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-[10px] z-10 group-hover:from-black/60 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-[10px] z-10 group-hover:from-black/70 transition-all duration-300"></div>
 
                     {/* Image avec animation de zoom au hover */}
                     <img
